@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Wipe",
+    "version": "1.0",
+    "description": "在页面上选择文本时显示模态框。",
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动词语示例</title>
+    <style>
+        #word-slider {
+            overflow: hidden;
+            width: 200px;
+            /* 根据需要调整宽度 */
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .word {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .word.active {
+            display: inline;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="word-slider">
+        <span class="word active">火车</span>
+        <span class="word">词语2</span>
+        <span class="word">词语3</span>
+    </div>
+
+    <script>
+        (function () {
+            // 创建并插入模态框的 HTML
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.backgroundColor = '#fff';
+            modal.style.border = '1px solid #ccc';
+            modal.style.padding = '10px';
+            modal.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            modal.style.display = 'none';
+            modal.style.zIndex = '1000';
+            document.body.appendChild(modal);
+
+            // 监听鼠标抬起事件
+            document.addEventListener('mouseup', function (event) {
+                const selectedText = window.getSelection().toString().trim();
+                if (selectedText) {
+
+                    // 获取选中文本的范围
+                    const range = window.getSelection().getRangeAt(0);
+                    const rect = range.getBoundingClientRect();
+
+                    fetchAPIData(selectedText).then(data => {
+                        // 在这里处理 API 返回的数据
+                        modal.innerHTML = `<strong>${selectedText}</strong>: ${data}`;
+                        modal.style.top = `${window.scrollY + rect.bottom + 5}px`; // 显示在选中词语的下方
+                        modal.style.left = `${window.scrollX + rect.left}px`; // 对齐到选中词语的左侧
+                        modal.style.display = 'block';
+                    }).catch(error => {
+                        console.error('API error:', error);
+                    });
+                } else {
+                    modal.style.display = 'none';
+                }
+            });
+
+            function fetchAPIData(word) {
+                const apiKey = '57eb628439d4a34262391de90b862b8d.Kun8795cPwJ2jlDO'; // 请将此处替换为你的实际 API 密钥
+                const url = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+
+                const requestBody = {
+                    model: "glm-4-flash",
+                    messages: [
+                        {
+                            role: "user",
+                            content: `你是一个英语专家，请翻译以下内容："${word}"`
+                        }
+                    ]
+                };
+
+                return fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // 根据 API 返回的数据结构进行解析
+                        // 假设返回的数据格式为 { result: "..." }
+                        return data.choices[0].message.content || 'No result found';
+                    })
+                    .catch(error => {
+                        console.error('Fetch API error:', error);
+                        return 'Error fetching data';
+                    });
+            }
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
