@@ -60,9 +60,25 @@
         }
     });
 
-    function fetchAPIData(word) {
+    function getSyncStorageData(keys) {
+        return new Promise((resolve, reject) => {
+          chrome.storage.sync.get(keys, (items) => {
+            if (chrome.runtime.lastError) {
+              reject(chrome.runtime.lastError);
+            } else {
+              resolve(items);
+            }
+          });
+        });
+    }
 
-        const apiKey = ''; // 请将此处替换为你的实际 API 密钥
+    async function fetchAPIData(word) {
+
+        const data = await getSyncStorageData(['apiKey', 'prompt']);
+
+        let apiKey = data.apiKey
+        let prompt = data.prompt.replace('${word}', word)
+
         const url = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
 
         const requestBody = {
@@ -70,25 +86,7 @@
             messages: [
                 {
                     role: "user",
-                    content: `#  Role: 翻译专家 : 专注于英文翻译，确保准确性和专业性，同时符合中文表达习惯。
-
-## Goals
-准确、专业地将英文书籍翻译成中文，保持原意，符合中文表达习惯。
-
-## Constrains
-必须保持原意，同时符合中文表达习惯。
-
-## Skills
-英文到中文的专业翻译能力，理解并保持原意，熟悉中文表达习惯。
-
-## Output format
-提供准确、专业的中文翻译文本。
-
-## Workflow: 
-1. 仔细阅读并理解<内容>"${word}"</内容>。
-2. 对以上内容进行翻译，确保准确性和专业性。
-3. 校对翻译文本，确保符合中文表达习惯。
-4. 只输出最终翻译文本。`
+                    content: prompt
                 }
             ]
         };

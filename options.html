@@ -2,18 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>扩展设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置插件</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        label { display: block; margin-bottom: 8px; }
-        input[type="text"] { width: 300px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <h1>配置扩展设置</h1>
-    <label for="prompt">Prompt:</label>
-    <input type="text" id="prompt" placeholder="Enter your prompt here">
-    <button id="save">保存</button>
+    <div class="container">
+        <h1>配置插件</h1>
+        <label for="apiKey">ApiKey:</label>
+        <input type="text" id="apiKey" placeholder="Enter your apiKey here">
+        
+        <label for="prompt">提示词:</label>
+        <textarea id="prompt" placeholder="Enter your prompt here" cols="20" rows="20">
+            #  Role: 翻译专家 : 专注于英文翻译，确保准确性和专业性，同时符合中文表达习惯。
+
+            ## Goals
+            准确、专业地将英文书籍翻译成中文，保持原意，符合中文表达习惯。
+            
+            ## Constrains
+            必须保持原意，同时符合中文表达习惯。
+            
+            ## Skills
+            英文到中文的专业翻译能力，理解并保持原意，熟悉中文表达习惯。
+            
+            ## Output format
+            提供准确、专业的中文翻译文本。
+            
+            ## Workflow:
+            1. 仔细阅读并理解<内容>"${word}"</内容>。
+            2. 对以上内容进行翻译，确保准确性和专业性。
+            3. 校对翻译文本，确保符合中文表达习惯。
+            4. 只输出最终翻译文本。
+        </textarea>
+        
+        <button id="save">保存</button>
+    </div>
 
     <script src="options.js"></script>
 </body>

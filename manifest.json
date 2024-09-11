@@ -5,7 +5,8 @@
     "description": "在页面上选择文本时显示模态框。",
     "permissions": [
         "activeTab",
-        "contextMenus"
+        "contextMenus",
+        "storage"
     ],
     "options_page": "options.html",
     "content_scripts": [
