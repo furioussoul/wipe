@@ -62,7 +62,7 @@
 
     function fetchAPIData(word) {
 
-        const apiKey = '2f04058b948560689304090576fb2438.ECNPqvMySjr7orQ5'; // 请将此处替换为你的实际 API 密钥
+        const apiKey = ''; // 请将此处替换为你的实际 API 密钥
         const url = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
 
         const requestBody = {
