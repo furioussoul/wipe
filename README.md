@@ -20,7 +20,7 @@
 
 #### 加载插件
 
-\*\*点击浏览器右上角“自定义及控制 Google Chrome ”  \*\*
+**点击浏览器右上角 `“自定义及控制 Google Chrome ”`**
 
 ![alt text](images/2.png)
 
