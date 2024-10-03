@@ -5,7 +5,7 @@ import {
 import { debounce } from 'lodash-es'
 import {
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { useTranslation } from 'react-i18next'
 import { useWorkflowHistoryStore } from '../workflow-history-store'
 

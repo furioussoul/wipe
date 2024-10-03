@@ -3,7 +3,7 @@ import {
   getConnectedEdges,
   getIncomers,
   getOutgoers,
-} from '@xyflow/react'
+} from 'reactflow'
 import dagre from '@dagrejs/dagre'
 import { v4 as uuid4 } from 'uuid'
 import {

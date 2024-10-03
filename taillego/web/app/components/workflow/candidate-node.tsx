@@ -6,7 +6,7 @@ import {
   useReactFlow,
   useStoreApi,
   useViewport,
-} from '@xyflow/react'
+} from 'reactflow'
 import { useEventListener } from 'ahooks'
 import {
   useStore,

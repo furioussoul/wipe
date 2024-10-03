@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next'
 import {
   useReactFlow,
   useViewport,
-} from '@xyflow/react'
+} from 'reactflow'
 import {
   useNodesSyncDraft,
   useWorkflowReadOnly,

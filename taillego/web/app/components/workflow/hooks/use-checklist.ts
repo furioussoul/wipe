@@ -3,7 +3,7 @@ import {
   useMemo,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 import type {
   Edge,
   Node,

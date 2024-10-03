@@ -3,10 +3,10 @@ import produce from 'immer'
 import type {
   EdgeMouseHandler,
   OnEdgesChange,
-} from '@xyflow/react'
+} from 'reactflow'
 import {
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import type {
   Node,
 } from '../types'

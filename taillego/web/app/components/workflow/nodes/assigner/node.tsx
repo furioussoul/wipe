@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import React from 'react'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import { useTranslation } from 'react-i18next'
 import NodeVariableItem from '../variable-assigner/components/node-variable-item'
 import { type AssignerNodeType } from './types'

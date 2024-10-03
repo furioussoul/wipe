@@ -23,11 +23,11 @@ import {
   useOnViewportChange,
   useReactFlow,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import type {
   Viewport,
-} from '@xyflow/react'
-import '@xyflow/react/dist/style.css'
+} from 'reactflow'
+import 'reactflow/dist/style.css'
 import './style.css'
 import type {
   Edge,
@@ -427,7 +427,12 @@ const WorkflowWrap = memo(() => {
       <WorkflowHistoryProvider
         nodes={nodesData}
         edges={edgesData} >
-        FeaturesProvider
+        <span>FeaturesProvider</span>
+        <Workflow
+          nodes={nodesData}
+          edges={edgesData}
+          viewport={data?.graph.viewport}
+        />
       </WorkflowHistoryProvider>
     </ReactFlowProvider>
   )

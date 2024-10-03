@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import type { NodeProps } from '@xyflow/react'
+import type { NodeProps } from 'reactflow'
 import { RiHome5Fill } from '@remixicon/react'
 import Tooltip from '@/app/components/base/tooltip'
 import { NodeSourceHandle } from '@/app/components/workflow/nodes/_base/components/node-handle'

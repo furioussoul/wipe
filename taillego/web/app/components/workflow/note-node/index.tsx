@@ -5,7 +5,7 @@ import {
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useClickAway } from 'ahooks'
-import type { NodeProps } from '@xyflow/react'
+import type { NodeProps } from 'reactflow'
 import NodeResizer from '../nodes/_base/components/node-resizer'
 import {
   useNodeDataUpdate,

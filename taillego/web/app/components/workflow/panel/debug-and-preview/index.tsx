@@ -6,7 +6,7 @@ import {
 import { useKeyPress } from 'ahooks'
 import { RiCloseLine, RiEqualizer2Line } from '@remixicon/react'
 import { useTranslation } from 'react-i18next'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import {
   useEdgesInteractions,
   useNodesInteractions,

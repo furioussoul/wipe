@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import { capitalize } from 'lodash-es'
 import { useTranslation } from 'react-i18next'
 import { RiErrorWarningFill } from '@remixicon/react'

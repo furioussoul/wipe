@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import type { NodeProps } from '@xyflow/react'
+import type { NodeProps } from 'reactflow'
 import InfoPanel from '../_base/components/info-panel'
 import { NodeSourceHandle } from '../_base/components/node-handle'
 import type { QuestionClassifierNodeType } from './types'

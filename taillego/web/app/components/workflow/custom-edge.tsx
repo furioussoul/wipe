@@ -4,13 +4,13 @@ import {
   useState,
 } from 'react'
 import { intersection } from 'lodash-es'
-import type { EdgeProps } from '@xyflow/react'
+import type { EdgeProps } from 'reactflow'
 import {
   BaseEdge,
   EdgeLabelRenderer,
   Position,
   getBezierPath,
-} from '@xyflow/react'
+} from 'reactflow'
 import {
   useAvailableBlocks,
   useNodesInteractions,

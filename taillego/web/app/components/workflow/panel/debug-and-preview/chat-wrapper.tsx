@@ -5,7 +5,7 @@ import {
   useImperativeHandle,
   useMemo,
 } from 'react'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import { BlockEnum } from '../../types'
 import {
   useStore,

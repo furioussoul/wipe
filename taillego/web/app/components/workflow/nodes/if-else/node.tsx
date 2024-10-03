@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import type { NodeProps } from '@xyflow/react'
+import type { NodeProps } from 'reactflow'
 import { NodeSourceHandle } from '../_base/components/node-handle'
 import { isEmptyRelatedOperator } from './utils'
 import type { IfElseNodeType } from './types'

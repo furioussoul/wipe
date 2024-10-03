@@ -1,7 +1,7 @@
 import {
   memo,
 } from 'react'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import FormItem from '../../nodes/_base/components/before-run-form/form-item'
 import { BlockEnum } from '../../types'
 import {

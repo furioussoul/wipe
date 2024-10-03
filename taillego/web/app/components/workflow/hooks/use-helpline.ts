@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 import type { Node } from '../types'
 import { useWorkflowStore } from '../store'
 

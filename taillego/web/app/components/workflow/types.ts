@@ -2,7 +2,7 @@ import type {
   Edge as ReactFlowEdge,
   Node as ReactFlowNode,
   Viewport,
-} from '@xyflow/react'
+} from 'reactflow'
 import type { TransferMethod } from '@/types/app'
 import type { ToolDefaultValue } from '@/app/components/workflow/block-selector/types'
 import type { VarType as VarKindType } from '@/app/components/workflow/nodes/tool/types'

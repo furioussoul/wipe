@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { memo } from 'react'
-import { useNodes } from '@xyflow/react'
-import useShallow from 'zustand/shallow'
+import { useNodes } from 'reactflow'
+import { useShallow } from 'zustand/react/shallow'
 import type { CommonNodeType } from '../types'
 import { Panel as NodePanel } from '../nodes'
 import { useStore } from '../store'
@@ -14,6 +14,7 @@ import ChatVariablePanel from './chat-variable-panel'
 import EnvPanel from './env-panel'
 import cn from '@/utils/classnames'
 import MessageLogModal from '@/app/components/base/message-log-modal'
+import { useStore as useAppStore } from '@/app/components/app/store'
 
 const Panel: FC = () => {
   const nodes = useNodes<CommonNodeType>()

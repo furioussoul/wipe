@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import produce from 'immer'
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 import { isEqual } from 'lodash-es'
 import { VarType } from '../../types'
 import type { ValueSelector, Var } from '../../types'

@@ -7,7 +7,7 @@ import {
   Background,
   useNodesInitialized,
   useViewport,
-} from '@xyflow/react'
+} from 'reactflow'
 import { IterationStartNodeDumb } from '../iteration-start'
 import { useNodeIterationInteractions } from './use-interactions'
 import type { IterationNodeType } from './types'

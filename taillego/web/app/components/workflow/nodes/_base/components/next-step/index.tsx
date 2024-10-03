@@ -5,7 +5,7 @@ import {
   getOutgoers,
   useEdges,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { useToolIcon } from '../../../../hooks'
 import BlockIcon from '../../../../block-icon'
 import type {

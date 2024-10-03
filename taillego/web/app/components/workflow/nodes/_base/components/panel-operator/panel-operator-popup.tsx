@@ -3,7 +3,7 @@ import {
   useMemo,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useEdges } from '@xyflow/react'
+import { useEdges } from 'reactflow'
 import { useNodeHelpLink } from '../../hooks/use-node-help-link'
 import ChangeBlock from './change-block'
 import {

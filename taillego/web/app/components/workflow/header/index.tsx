@@ -5,7 +5,7 @@ import {
   useMemo,
 } from 'react'
 import { RiApps2AddLine } from '@remixicon/react'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import { useTranslation } from 'react-i18next'
 import { useContext } from 'use-context-selector'
 import {

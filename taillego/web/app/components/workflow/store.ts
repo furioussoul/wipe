@@ -4,7 +4,7 @@ import {
 } from 'zustand'
 import { createStore } from 'zustand/vanilla'
 import { debounce } from 'lodash-es'
-import type { Viewport } from '@xyflow/react'
+import type { Viewport } from 'reactflow'
 import type {
   HelpLineHorizontalPosition,
   HelpLineVerticalPosition,
@@ -169,7 +169,7 @@ type Shape = {
 export const createWorkflowStore = () => {
   return createStore<Shape>(set => ({
     appId: '',
-    panelWidth: localStorage.getItem('workflow-node-panel-width') ? parseFloat(localStorage.getItem('workflow-node-panel-width')!) : 420,
+    panelWidth: 420,
     showSingleRunPanel: false,
     setShowSingleRunPanel: showSingleRunPanel => set(() => ({ showSingleRunPanel })),
     workflowRunningData: undefined,
@@ -233,7 +233,7 @@ export const createWorkflowStore = () => {
     setSelection: selection => set(() => ({ selection })),
     bundleNodeSize: null,
     setBundleNodeSize: bundleNodeSize => set(() => ({ bundleNodeSize })),
-    controlMode: localStorage.getItem('workflow-operation-mode') === 'pointer' ? 'pointer' : 'hand',
+    controlMode: 'hand',
     setControlMode: (controlMode) => {
       set(() => ({ controlMode }))
       localStorage.setItem('workflow-operation-mode', controlMode)

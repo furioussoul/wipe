@@ -3,7 +3,7 @@ import {
   useMemo,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import FormItem from '../nodes/_base/components/before-run-form/form-item'
 import {
   BlockEnum,

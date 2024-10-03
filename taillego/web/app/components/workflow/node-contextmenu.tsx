@@ -4,7 +4,7 @@ import {
   useRef,
 } from 'react'
 import { useClickAway } from 'ahooks'
-import { useNodes } from '@xyflow/react'
+import { useNodes } from 'reactflow'
 import PanelOperatorPopup from './nodes/_base/components/panel-operator/panel-operator-popup'
 import type { Node } from './types'
 import { useStore } from './store'

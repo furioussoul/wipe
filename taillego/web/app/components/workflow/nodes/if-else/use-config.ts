@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import produce from 'immer'
 import { v4 as uuid4 } from 'uuid'
-import { useUpdateNodeInternals } from '@xyflow/react'
+import { useUpdateNodeInternals } from 'reactflow'
 import type {
   Var,
 } from '../../types'

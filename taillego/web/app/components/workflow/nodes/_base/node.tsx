@@ -198,13 +198,13 @@ const BaseNode: FC<BaseNodeProps> = ({
             cloneElement(children, { id, data })
           )
         }
-        {
+        {/* {
           data.type === BlockEnum.Iteration && (
             <div className='grow pl-1 pr-1 pb-1'>
               {cloneElement(children, { id, data })}
             </div>
           )
-        }
+        } */}
         {
           data.desc && data.type !== BlockEnum.Iteration && (
             <div className='px-3 pt-1 pb-2 system-xs-regular text-text-tertiary whitespace-pre-line break-words'>

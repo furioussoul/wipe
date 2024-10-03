@@ -3,7 +3,7 @@ import {
   getIncomers,
   useReactFlow,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import produce from 'immer'
 import { v4 as uuidV4 } from 'uuid'
 import { usePathname } from 'next/navigation'

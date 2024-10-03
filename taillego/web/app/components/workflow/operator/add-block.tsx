@@ -4,7 +4,7 @@ import {
   useState,
 } from 'react'
 import { RiAddCircleFill } from '@remixicon/react'
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 import { useTranslation } from 'react-i18next'
 import type { OffsetOptions } from '@floating-ui/react'
 import {

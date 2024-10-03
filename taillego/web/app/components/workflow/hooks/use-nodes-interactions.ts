@@ -9,13 +9,13 @@ import type {
   OnConnectEnd,
   OnConnectStart,
   ResizeParamsWithDirection,
-} from '@xyflow/react'
+} from 'reactflow'
 import {
   getConnectedEdges,
   getOutgoers,
   useReactFlow,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { unionBy } from 'lodash-es'
 import type { ToolDefaultValue } from '../block-selector/types'
 import type {

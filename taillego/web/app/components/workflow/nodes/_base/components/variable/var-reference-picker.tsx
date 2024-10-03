@@ -8,7 +8,7 @@ import {
   RiErrorWarningFill,
 } from '@remixicon/react'
 import produce from 'immer'
-import { useEdges, useStoreApi } from '@xyflow/react'
+import { useEdges, useStoreApi } from 'reactflow'
 import useAvailableVarList from '../../hooks/use-available-var-list'
 import VarReferencePopup from './var-reference-popup'
 import { getNodeInfoById, isConversationVar, isENV, isSystemVar } from './utils'

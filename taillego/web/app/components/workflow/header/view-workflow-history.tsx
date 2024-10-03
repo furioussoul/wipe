@@ -10,7 +10,7 @@ import {
 } from '@remixicon/react'
 import { useTranslation } from 'react-i18next'
 import { useShallow } from 'zustand/react/shallow'
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 import {
   useNodesReadOnly,
   useWorkflowHistory,

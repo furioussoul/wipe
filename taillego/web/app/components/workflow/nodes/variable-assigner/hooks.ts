@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import {
   useNodes,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { uniqBy } from 'lodash-es'
 import produce from 'immer'
 import {

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import {
   useEdges,
   useNodes,
-} from '@xyflow/react'
+} from 'reactflow'
 import {
   RiCloseLine,
   RiListCheck3,

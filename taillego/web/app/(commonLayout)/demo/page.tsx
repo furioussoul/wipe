@@ -6,8 +6,7 @@ import Workflow from '@/app/components/workflow'
 
 const Page: FC = () => {
     return (
-        <Workflow>
-        </Workflow>
+        <Workflow />
     )
 }
 export default memo(Page)

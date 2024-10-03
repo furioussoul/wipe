@@ -1,4 +1,4 @@
-import { useStoreApi } from '@xyflow/react'
+import { useStoreApi } from 'reactflow'
 
 const useNodeInfo = (nodeId: string) => {
   const store = useStoreApi()

@@ -3,7 +3,7 @@ import ELK from 'elkjs/lib/elk.bundled.js'
 import {
   useReactFlow,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { cloneDeep } from 'lodash-es'
 import type {
   Edge,

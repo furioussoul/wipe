@@ -8,7 +8,7 @@ import {
 import {
   Handle,
   Position,
-} from '@xyflow/react'
+} from 'reactflow'
 import { useTranslation } from 'react-i18next'
 import { BlockEnum } from '../../../types'
 import type { Node } from '../../../types'

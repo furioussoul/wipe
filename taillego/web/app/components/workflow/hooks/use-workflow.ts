@@ -12,10 +12,10 @@ import {
   getIncomers,
   getOutgoers,
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import type {
   Connection,
-} from '@xyflow/react'
+} from 'reactflow'
 import type {
   Edge,
   Node,

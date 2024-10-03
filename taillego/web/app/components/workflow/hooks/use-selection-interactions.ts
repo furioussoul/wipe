@@ -5,8 +5,8 @@ import {
 import produce from 'immer'
 import type {
   OnSelectionChangeFunc,
-} from '@xyflow/react'
-import { useStoreApi } from '@xyflow/react'
+} from 'reactflow'
+import { useStoreApi } from 'reactflow'
 import { useWorkflowStore } from '../store'
 import type { Node } from '../types'
 

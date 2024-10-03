@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { useViewport } from '@xyflow/react'
+import { useViewport } from 'reactflow'
 import { useStore } from '../store'
 import type {
   HelpLineHorizontalPosition,

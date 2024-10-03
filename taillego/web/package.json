@@ -90,7 +90,7 @@
     "zod": "^3.23.6",
     "zundo": "^2.1.0",
     "zustand": "^4.5.2",
-    "@xyflow/react": "latest"
+    "reactflow": "^11.11.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",

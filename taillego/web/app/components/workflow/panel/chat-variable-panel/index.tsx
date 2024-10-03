@@ -6,7 +6,7 @@ import {
 import { useContext } from 'use-context-selector'
 import {
   useStoreApi,
-} from '@xyflow/react'
+} from 'reactflow'
 import { RiBookOpenLine, RiCloseLine } from '@remixicon/react'
 import { useTranslation } from 'react-i18next'
 import { useStore } from '@/app/components/workflow/store'
