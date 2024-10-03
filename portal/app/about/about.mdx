@@ -1,0 +1,102 @@
+import MDXComponents from "./MDXComponents";
+
+# About Us
+
+Welcome to our website! This page is created using MDX.
+
+<MDXComponents>
+  在前端项目中，各个文件和目录通常有特定的作用。以下是你列出的文件和目录的简要解释：
+
+1. **Dockerfile**: 用于定义如何构建项目的Docker镜像。它包含了安装项目依赖、构建项目以及运行项目所需的步骤。
+
+2. **README.md**: 包含项目的概述、安装指南、使用说明以及其他相关信息的文档。
+
+3. **app**: 通常是存放应用的主要源代码目录，可能包含组件、页面、路由等。
+
+4. **assets**: 用于存放静态资源，如图像、字体、图标等。
+
+5. **bin**: 通常用于存放可执行脚本或命令行工具。
+
+6. **config**: 存放项目的配置文件，如环境配置、构建配置等。
+
+7. **context**: 用于存放React的上下文文件，管理全局状态。
+
+8. **docker**: 可能用于存放与Docker相关的文件或配置。
+
+9. **global.d.ts**: TypeScript的全局声明文件，用于定义全局类型或模块。
+
+> Q:引用<reference types="next" /> ts怎么知道对应上哪个类型呢？
+>
+> A:当你在 TypeScript 中使用 `/// <reference types="next" />` 这样的指令时，TypeScript 编译器会根据项目的依赖关系来解析和加载相应的类型定义。这是通过 Node.js 的模块解析机制以及 TypeScript 的类型定义文件查找策略来实现的。
+>
+> ### 工作机制
+>
+> 1. **Node.js 模块解析**：
+>    - TypeScript 使用 Node.js 的模块解析机制来查找项目中的依赖包。在 `package.json` 文件中，项目列出了它所依赖的库，例如 `next`。
+> 2. **`@types` 包**：
+>    - 对于没有内置类型定义的 JavaScript 库，TypeScript 通常会从 `@types` 组织中查找相应的类型定义包。例如，`@types/react` 提供了 React 的类型定义。
+>    - 然而，对于 Next.js 这样的库，它们通常自带类型定义文件，因此不需要额外的 `@types` 包。
+> 3. **`types` 字段**：
+>    - 在库的 `package.json` 文件中，通常会有一个 `types` 字段或 `typings` 字段，指定了类型定义文件的路径。TypeScript 会根据这个路径加载类型定义。
+>    - 对于 Next.js，`package.json` 中可能包含类似 `"types": "dist/next.d.ts"` 的字段，指向其类型定义文件。
+> 4. **类型定义文件的位置**：
+>    - 当你在项目中使用 `/// <reference types="next" />` 时，TypeScript 知道去 `node_modules/next` 目录中查找类型定义文件，因为 `next` 是一个已安装的依赖包。
+>    - TypeScript 会查找 `node_modules/next/index.d.ts` 或者 `node_modules/next/dist/next.d.ts` 等路径。
+>
+> ### 例子
+>
+> 假设你在一个 Next.js 项目中使用了 `/// <reference types="next" />`，TypeScript 会：
+>
+> - 检查 `node_modules` 目录，找到 `next` 包。
+> - 读取 `next` 包的 `package.json`，查看 `types` 或 `typings` 字段，确定类型定义文件的位置。
+> - 加载这些类型定义文件，使得项目中的 TypeScript 代码能够获得 Next.js 的类型支持。
+>
+> ### 总结
+>
+> 通过这种方式，TypeScript 可以根据项目的依赖关系自动解析并加载正确的类型定义文件。这种机制确保了项目能够正确地进行类型检查，并提供智能提示和代码补全功能。
+
+10. **hooks**: 存放自定义的React hooks，以便复用状态逻辑。
+
+11. **i18n**: 与国际化（i18n）相关的文件或配置，用于支持多语言功能。
+
+12. **jest.config.ts**: Jest的配置文件，用于配置测试框架。
+
+13. **models**: 用于存放数据模型或类型定义。
+
+14. **next-env.d.ts**: Next.js的环境类型定义文件，通常由Next.js自动生成。
+
+15. **next.config.js**: Next.js的配置文件，用于定制Next.js应用的构建和运行行为。
+
+16. **node_modules**: 存放项目的所有npm依赖包，通常由包管理器自动生成。
+
+17. **package-lock.json**: 锁定项目依赖版本的文件，确保项目在不同环境下的一致性。
+
+18. **package.json**: 项目的配置文件，包含项目的基本信息、脚本命令和依赖项等。
+
+19. **postcss.config.js**: PostCSS的配置文件，用于处理CSS文件的插件配置。
+
+20. **public**: 存放公共静态资源的目录，这些资源可以直接通过URL访问。
+
+21. **service**: 可能用于存放与API交互的服务层代码。
+
+22. **tailwind.config.js**: Tailwind CSS的配置文件，用于定制Tailwind的样式。
+
+23. **themes**: 存放主题相关的文件或配置，可能用于定义不同的UI主题。
+
+24. **tsconfig.json**: TypeScript的配置文件，定义编译选项。
+
+25. **typography.js**: 可能用于定义排版相关的样式或配置。
+
+26. **types**: 存放TypeScript的类型定义文件，通常用于声明接口、类型别名等。
+
+27. **utils**: 存放工具函数或辅助函数，以便在项目中复用。
+
+28. **yarn.lock**: 锁定项目依赖版本的文件，与`package-lock.json`类似，但用于Yarn包管理器。
+
+这些文件和目录共同构成了前端项目的结构，帮助开发者组织代码、管理依赖、配置项目和处理构建任务。
+
+---
+
+max
+
+</MDXComponents>
